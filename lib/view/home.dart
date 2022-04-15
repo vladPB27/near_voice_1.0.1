@@ -24,7 +24,9 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
   void afterFirstLayout(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   }
+
   //i will improve this code
+  final testController = TextEditingController();
 
   String _ip = "unknown";
 
@@ -62,37 +64,37 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      child: Row(
-                        children: [
-                          Container(
-                            height: 60,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: userInfo.imageReal != null
-                                    ? Image.file(
-                                        _imageReal,
-                                        fit: BoxFit.cover,
-                                      ).image
-                                    : userInfo.icon != null
-                                        ? AssetImage(userInfo.icon)
-                                        : AssetImage('assets/user-3.png'),
-                              ),
+                        //probando Wrap en lugar de Row
+                        child: Wrap(
+                      children: [
+                        Container(
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: userInfo.imageReal != null
+                                  ? Image.file(
+                                      _imageReal,
+                                      fit: BoxFit.cover,
+                                    ).image
+                                  : userInfo.icon != null
+                                      ? AssetImage(userInfo.icon)
+                                      : AssetImage('assets/user-3.png'),
                             ),
                           ),
-                          Text(
-                            '  Hi, ${userInfo.name}',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
+                        ),
+                        Text(
+                          '  Hi, ${userInfo.name}',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: 18,
                           ),
-                        ],
-                      ),
-                    ),
-                    //to reset login
+                        )
+                      ],
+                    )),
+                    // to reset login
                     // IconButton(
                     //     icon: Icon(Icons.logout),
                     //     onPressed: () async {
@@ -140,10 +142,10 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                             right: 55,
                             child: Text(
                               'Profile',
-                              style:
-                                  TextStyle(
-                                    fontFamily: 'OverpassBold',
-                                      color: Colors.white, fontSize: 24),
+                              style: TextStyle(
+                                  fontFamily: 'OverpassBold',
+                                  color: Colors.white,
+                                  fontSize: 24),
                             ),
                           ),
                         ],
@@ -173,8 +175,10 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                             top: 15,
                             child: Text(
                               'Create',
-                              style:
-                                  TextStyle(fontFamily: 'OverpassBold',color: Colors.white, fontSize: 24),
+                              style: TextStyle(
+                                  fontFamily: 'OverpassBold',
+                                  color: Colors.white,
+                                  fontSize: 24),
                             ),
                           ),
                         ],
@@ -197,8 +201,10 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                             bottom: 15,
                             child: Text(
                               'Connect',
-                              style:
-                                  TextStyle(fontFamily: 'OverpassBold',color: Colors.white, fontSize: 24),
+                              style: TextStyle(
+                                  fontFamily: 'OverpassBold',
+                                  color: Colors.white,
+                                  fontSize: 24),
                             ),
                           ),
                         ],

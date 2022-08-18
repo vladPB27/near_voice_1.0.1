@@ -26,6 +26,7 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
   }
 
   //i will improve this code
+  //TODO retomando informes
   final testController = TextEditingController();
 
   String _ip = "unknown";

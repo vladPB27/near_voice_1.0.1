@@ -52,6 +52,7 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
       });
     }
 
+    //TODO RAMA para practicas
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -86,6 +87,7 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                             ),
                           ),
                         ),
+                        Text('PRACTICAS PRE PRO'),
                         Text(
                           '  Hi, ${userInfo.name}',
                           textAlign: TextAlign.left,

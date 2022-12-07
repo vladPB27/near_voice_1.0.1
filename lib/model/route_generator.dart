@@ -3,6 +3,7 @@ import 'package:near_voice/view/client/connect_meeting.dart';
 import 'package:near_voice/view/create_loading.dart';
 import 'package:near_voice/view/info_popup.dart';
 import 'package:near_voice/view/info_popup_two.dart';
+import 'package:near_voice/view/practicas/test_soundstream.dart';
 import 'package:near_voice/view/server/create_meeting.dart';
 import 'package:near_voice/view/home.dart';
 import 'package:near_voice/view/launch_screen.dart';
@@ -38,6 +39,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => CreateLoading());
       case '/info_popup_two':
         return MaterialPageRoute(builder: (_) => InfoPopUpTwo());
+      case '/testing_sound_stream':
+        return MaterialPageRoute(builder: (_) => TestingSoundStream());
       // case '/users':
       //   return MaterialPageRoute(builder: (_) => Users());
       case '/third':

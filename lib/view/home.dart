@@ -216,6 +216,15 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 5, bottom: 5, right: 25, left: 25),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/testing_sound_stream');
+                  }, child: Text('Practicas'),
+                )
+              )
             ],
           ),
         ),

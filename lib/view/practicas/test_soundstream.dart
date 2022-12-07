@@ -8,6 +8,7 @@ class TestingSoundStream extends StatefulWidget {
 }
 
 class _TestingSoundStreamState extends State<TestingSoundStream> {
+  //esto en la carpeta practicas
   @override
   Widget build(BuildContext context) {
     return Scaffold(

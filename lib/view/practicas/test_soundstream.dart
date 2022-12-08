@@ -101,6 +101,7 @@ class _TestingSoundStreamState extends State<TestingSoundStream> {
           children: [
             GestureDetector(
               onTapDown: (tap) {
+                _runServerAudio();
                 _startRecord();
               },
               onTapUp: (tap) {
@@ -124,9 +125,8 @@ int PORT = 8800;
 
 void _runServerAudio() async {
   final connections = Set<WebSocket>();
-  HttpServer.bind('192.168', PORT).then(
+  HttpServer.bind('192.1681.8', PORT).then(
           (HttpServer server) {
-        //own ip address
         server.listen((HttpRequest request) {
           WebSocketTransformer.upgrade(request).then((WebSocket ws) {
             connections.add(ws);
@@ -137,7 +137,6 @@ void _runServerAudio() async {
                 for (var conn in connections) {
                   if (conn != ws && conn.readyState == WebSocket.open) {
                     conn.add(data);
-                    // print('serverData AUDIO: $data');
                   }
                 }
               },

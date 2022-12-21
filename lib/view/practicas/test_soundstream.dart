@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_ip/get_ip.dart';
+import 'package:near_voice/model/colors.dart';
 import 'package:near_voice/sound_stream.dart';
 import 'package:web_socket_channel/io.dart';
 
@@ -110,7 +111,9 @@ class _TestingSoundStreamState extends State<TestingSoundStream> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: Text('Server'),
+          elevation: 0,
+          backgroundColor: ColorsNearVoice.primaryColor,
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

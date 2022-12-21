@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get_ip/get_ip.dart';
 import 'package:near_voice/sound_stream.dart';
 import 'package:web_socket_channel/io.dart';
 
@@ -39,6 +41,21 @@ class _TestingSoundStreamState extends State<TestingSoundStream> {
     _playerStatus?.cancel();
     _audioStream?.cancel();
     super.dispose();
+  }
+  //obtener direccion IP
+  Future<void> initPlatformState() async {
+    String ipAddress;
+    var currentIpAddress;
+    try {
+      ipAddress = await GetIp.ipAddress;
+    } on PlatformException {
+      ipAddress = 'Failed to get ipAddress';
+    }
+
+    if (!mounted) return;
+    setState(() {
+      currentIpAddress = ipAddress;
+    });
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.

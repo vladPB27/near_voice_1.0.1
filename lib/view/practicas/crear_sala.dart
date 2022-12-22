@@ -12,11 +12,10 @@ class _CrearSalaState extends State<CrearSala> {
   @override
   Widget build(BuildContext context) {
     final nameController = TextEditingController();
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
-          title: Text('Server'),
-          elevation: 0,
+          // title: Text('Server'),
+          title: Text('Cliente'),
           backgroundColor: ColorsNearVoice.primaryColor,
         ),
         body: Column(
@@ -37,7 +36,8 @@ class _CrearSalaState extends State<CrearSala> {
                       Radius.circular(30.0),
                     ),
                   ),
-                  hintText: 'Ingrese una direccion IP',
+                  // hintText: 'Ingrese una direccion IP',
+                  hintText: 'Ingrese la direccion IP del host',
                 ),
               ),
             ),
@@ -47,7 +47,10 @@ class _CrearSalaState extends State<CrearSala> {
                 onPressed: () {
                   Navigator.of(context).pushNamed('/testing_sound_stream');
                 },
-                child: Text('Crear'),
+                // child: Text('Crear',style: TextStyle(
+                child: Text('Unirse',style: TextStyle(
+                    color: Colors.white
+                ),),
                 style: TextButton.styleFrom(
                   backgroundColor: ColorsNearVoice.primaryColor,
                   fixedSize: const Size(20, 40),
@@ -56,7 +59,6 @@ class _CrearSalaState extends State<CrearSala> {
             )
           ],
         ),
-      ),
-    );
+      );
   }
 }

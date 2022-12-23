@@ -44,6 +44,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => TestingSoundStream());
       case '/crearSala_practicas':
         return MaterialPageRoute(builder: (_) => CrearSala());
+      case '/login':
+        return MaterialPageRoute(builder: (_) => Login());
       // case '/users':
       //   return MaterialPageRoute(builder: (_) => Users());
       case '/third':

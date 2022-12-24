@@ -72,6 +72,22 @@ class _CrearSalaState extends State<CrearSala> {
                   fixedSize: const Size(20, 40),
                 ),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 100,right: 100),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/');
+                },
+                // child: Text('Crear',style: TextStyle(
+                child: Text('splash screen',style: TextStyle(
+                    color: Colors.white
+                ),),
+                style: TextButton.styleFrom(
+                  backgroundColor: ColorsNearVoice.primaryColor,
+                  fixedSize: const Size(20, 40),
+                ),
+              ),
             )
 
           ],

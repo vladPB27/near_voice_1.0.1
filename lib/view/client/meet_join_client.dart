@@ -556,7 +556,8 @@ class _MeetJoinState extends State<MeetJoin> {
                                           fit: BoxFit.fill,
                                           image: _splitUser[3] != 'micOf'
                                               ? AssetImage(_splitUser[2])
-                                              : AssetImage('assets/muted-user-icon.png'),
+                                              : AssetImage('assets/user-2.png'),
+                                              // : AssetImage('assets/muted-user-icon.png'),
                                         ),
                                       ),
                                     ),
@@ -726,8 +727,9 @@ _showInfoDialog(context, List split) {
                               image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: split[2] != 'null'
-                                      ? AssetImage(split[2])
-                                      : AssetImage('assets/user.png')),
+                                      // ? AssetImage(split[2])
+                                      ? AssetImage('assets/user-2.png')
+                                      : AssetImage('assets/user-2.png')),
                             ),
                           ),
                         ),

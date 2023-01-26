@@ -164,8 +164,8 @@ class _ImageCustomizeServerState extends State<ImageCustomizeServer> {
                                     ),
                                   ),
                                   onTap: () {
-                                    // getFromGallery();
-                                    // Navigator.of(context).pop();
+                                    getFromGallery();
+                                    Navigator.of(context).pop();
                                   },
                                 ),
                                 Text(

@@ -494,7 +494,8 @@ class _MeetCreatedState extends State<MeetCreated> {
                                             image: _splitUser[3] == 'micOn'
                                                 ? AssetImage(_splitUser[2])
                                                 : AssetImage(
-                                                    'assets/muted-user-icon.png')),
+                                                    'assets/user-3.png')),
+                                                    // 'assets/muted-user-icon.png')),
                                       ),
                                     ),
                                   ),

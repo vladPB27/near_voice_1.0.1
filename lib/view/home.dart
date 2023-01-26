@@ -87,7 +87,7 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                             ),
                           ),
                         ),
-                        Text('PRACTICAS PRE PRO'),
+                        // Text('PRACTICAS PRE PRO'),
                         Text(
                           '  Hi, ${userInfo.name}',
                           textAlign: TextAlign.left,
@@ -216,7 +216,7 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                   ],
                 ),
               ),
-              Padding(
+              /*Padding(
                 padding: const EdgeInsets.only(
                     top: 5, bottom: 5, right: 25, left: 25),
                 child: TextButton(
@@ -224,7 +224,7 @@ class _InitialPageState extends State<Home> with AfterLayoutMixin {
                     Navigator.of(context).pushNamed('/crearSala_practicas');
                   }, child: Text('Practicas'),
                 )
-              )
+              )*/
             ],
           ),
         ),
